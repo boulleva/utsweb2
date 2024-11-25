@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FalTV</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+        body {
+          background-color: #000000; 
+          color: #ffffff; 
+        }
+      
+        header {
+          background: linear-gradient(90deg, #353434, #3a3a3a);
+          color: #ffffff; 
+        }
+      
+        .card {
+          background-color: #1a1a1a; 
+          border: 1px solid #333; 
+        }
+      
+        .card-title {
+          color: #dc3545; 
+        }
+      
+        table.table-bordered th,
+        table.table-bordered td {
+          background-color: #1a1a1a; 
+          color: #ffffff; /
+        }
+      
+        .table thead th {
+          border-bottom: 2px solid #fff;
+        }
+      
+        footer {
+          background-color: #1f1f1f; 
+          color: #fff; 
+        }
+      
+        a {
+          color: #dc3545; 
+        }
+      
+        a:hover {
+          text-decoration: none;
+          color: #ff6666; 
+        }
+      </style>
+<script>
+    function handleLogin() {
+      const username = localStorage.getItem("username"); 
+      if (username) {
+        const loginButton = document.getElementById("loginButton");
+        loginButton.textContent = username; 
+        loginButton.classList.remove("btn-primary");
+        loginButton.classList.add("btn-success");
+        loginButton.disabled = true; 
+      }
+    }
+  
+    window.onload = handleLogin; 
+  </script>
+  
+  </head>
+  <body>
+    <header class="text-light py-3 shadow-sm">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-4">
+            <img src="assets/arnimlogo.png" alt="FalTV" height="50" />
+          </div>
+          <div class="col-md-4 text-center">
+            <h5>Everywhere Anywhere | 23 November 2024</h5>
+          </div>
+          <div class="col-md-4 text-right">
+            <button class="btn btn-outline-light">Hari Ini</button>
+            <button class="btn btn-outline-light" onclick="window.location.href='detail.html'">Lihat Detail</button>            <button 
+              id="loginButton" 
+              class="btn btn-primary" 
+              onclick="window.location.href='login.html'"
+            >
+              LOGIN 
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    </header>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mb-4">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <h3 class="card-title text-center text-danger mb-4">
+                  Team Performance
+                </h3>
+                <table class="table table-bordered">
+                  <thead class="bg-danger text-light">
+                    <tr>
+                      <th>TEAM FIGHT</th>
+                      <th>Clash Royal</th>
+                      <th>HONOR OF KINGS</th>
+                      <th>MAGIC CHESS</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1 - 1</td>
+                      <td>1 -2</td>
+                      <td>1 - 3</td>
+                      <td>1 - 1</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mt-4">
+            <h3 class="mb-4 text-danger">Berita Terbaru</h3>
+            <div class="card mb-3 shadow-sm">
+              <img
+                src="assets/mu.png"
+                class="card-img-top"
+                alt="Manchester United"
+              />
+              <div class="card-body">
+                <a href="mu.html">
+                <h5 class="card-title">MU Lupa Caranya Kalah</h5>
+                </a>
+                <p class="card-text">
+                  <small class="text-muted"
+                    >Noufal Zaidaan | Thu, 21 Nov 2024</small
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="card mb-3 shadow-sm">
+              <img
+                src="assets/gng.webp"
+                class="card-img-top"
+                alt="Guide Game Gold and Glory"
+              />
+              <div class="card-body">
+                <a href="gng.html">
+                <h5 class="card-title">Guide Game Gold and...</h5>
+                </a>
+                <p class="card-text">
+                  Guide bermain Gold and Glory agar semakin jago terutama di
+                  ranked.
+                </p>
+                <p class="card-text">
+                  <small class="text-muted"
+                    >Khadijah Putri Rahmadewi | 21 Nov 2024</small
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-8 mt-4">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <h3 class="text-center text-primary">Coming Soon</h3>
+                <p class="text-center">
+                  Tetaplah Bersama Kami Supaya Terus Update Berita!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 FalTV. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
